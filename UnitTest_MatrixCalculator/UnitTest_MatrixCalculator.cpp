@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../MatrixCalculator.h"
+#include "../MatrixCalculator.cpp"
 #include <vector>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
