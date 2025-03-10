@@ -15,3 +15,10 @@ std::vector<std::vector<double>> MatrixCalculator::Transpose(std::vector<std::ve
 	std::vector<std::vector<double>> result = { {1, 4}, {2, 5}, {3, 6} };
 	return result;
 }
+
+std::vector<std::vector<double>> MatrixCalculator::MultiplyByNum(std::vector<std::vector<double>> mat, double multiplier)
+{
+	//TODO Дописать умножение матриц на число
+	std::vector<std::vector<double>> result = { {10, 20, 30}, {40, 50, 60} };
+	return result;
+}
