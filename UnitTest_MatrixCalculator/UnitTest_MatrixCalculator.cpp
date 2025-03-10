@@ -34,5 +34,25 @@ namespace UnitTestMatrixCalculator
 					Assert::AreEqual(expected[i][j], actual[i][j]);
 			}	
 		}
+
+		TEST_METHOD(Sum2)
+		{
+			MatrixCalculator calc;
+			std::vector<std::vector<double>> matrix1 = { {1, 2}, {3, 4} };
+			std::vector<std::vector<double>> matrix2 = { {5, 6} };
+
+			bool exceptionFlag = false;
+			try
+			{
+				calc.Sum(matrix1, matrix2);
+			}
+			catch (...)
+			{
+				exceptionFlag = true;
+			}
+
+			if (!exceptionFlag)
+				Assert::Fail();
+		}
 	};
 }
