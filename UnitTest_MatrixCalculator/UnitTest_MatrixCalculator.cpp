@@ -54,5 +54,21 @@ namespace UnitTestMatrixCalculator
 			if (!exceptionFlag)
 				Assert::Fail();
 		}
+
+		TEST_METHOD(Transpose)
+		{
+			MatrixCalculator calc;
+			std::vector<std::vector<double>> matrix = { {1, 2, 3}, {4, 5, 6} };
+			std::vector<std::vector<double>> actual = calc.Transpose(matrix);
+
+			std::vector<std::vector<double>> expected = { {1, 4}, {2, 5}, {3, 6} };
+			Assert::AreEqual(expected.size(), actual.size());
+			for (int i = 0; i < expected.size(); i++)
+			{
+				Assert::AreEqual(expected[i].size(), actual[i].size());
+				for (int j = 0; j < expected[i].size(); j++)
+					Assert::AreEqual(expected[i][j], actual[i][j]);
+			}
+		}
 	};
 }
