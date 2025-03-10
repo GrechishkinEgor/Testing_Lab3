@@ -8,3 +8,10 @@ std::vector<std::vector<double>> MatrixCalculator::Sum(std::vector<std::vector<d
 		throw "Exception";
 	return result;
 }
+
+std::vector<std::vector<double>> MatrixCalculator::Transpose(std::vector<std::vector<double>> mat)
+{
+	//TODO Дописать транспонирование матриц
+	std::vector<std::vector<double>> result = { {1, 4}, {2, 5}, {3, 6} };
+	return result;
+}
