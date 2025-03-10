@@ -79,5 +79,16 @@ namespace UnitTestMatrixCalculator
 			std::vector<std::vector<double>> expected = { {10, 20, 30}, {40, 50, 60} };
 			AreMatrixEqual(expected, actual);
 		}
+
+		TEST_METHOD(MultiplyByNum2)
+		{
+			MatrixCalculator calc;
+			std::vector<std::vector<double>> matrix = { {1, 2, 3}, {4, 5, 6} };
+			double multiplier = 0;
+			std::vector<std::vector<double>> actual = calc.MultiplyByNum(matrix, multiplier);
+
+			std::vector<std::vector<double>> expected = { {0, 0, 0}, {0, 0, 0} };
+			AreMatrixEqual(expected, actual);
+		}
 	};
 }
