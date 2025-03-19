@@ -2,14 +2,15 @@
 
 void Matrix::Resize(int rowsCount, int colsCount)
 {
+	//TODO Add implementation
 }
 
 int Matrix::GetRowsCount()
 {
-	return 0;
+	return 3;
 }
 
 int Matrix::GetColsCount()
 {
-	return 0;
+	return 2;
 }
