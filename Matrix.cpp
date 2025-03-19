@@ -1,5 +1,13 @@
 #include "Matrix.h"
 
+Matrix::Matrix()
+{
+}
+
+Matrix::Matrix(int rowsCount, int colsCount)
+{
+}
+
 void Matrix::Resize(int rowsCount, int colsCount)
 {
 	//TODO Add implementation

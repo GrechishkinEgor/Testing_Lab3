@@ -24,5 +24,15 @@ namespace MatrixCalculatorTests
 			Assert::AreEqual(ROWS_COUNT, mat.GetRowsCount(), L"Не совпадает количество строк");
 			Assert::AreEqual(COLS_COUNT, mat.GetColsCount(), L"Не совпадает количество столбцов");
 		}
+
+		TEST_METHOD(SetSizeInConstructor)
+		{
+			const int ROWS_COUNT = 5;
+			const int COLS_COUNT = 3;
+			Matrix mat(ROWS_COUNT, COLS_COUNT);
+
+			Assert::AreEqual(ROWS_COUNT, mat.GetRowsCount(), L"Не совпадает количество строк");
+			Assert::AreEqual(COLS_COUNT, mat.GetColsCount(), L"Не совпадает количество столбцов");
+		}
 	};
 }
