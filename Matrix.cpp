@@ -39,5 +39,10 @@ double* Matrix::operator[](int index)
 
 Matrix Matrix::Sum(Matrix mat1, Matrix mat2)
 {
-	return Matrix();
+	Matrix result(4, 2);
+	result.row1[0] = 0; result.row1[1] = 0;
+	result.row2[0] = 0; result.row2[1] = 0;
+	result.row3[0] = 0; result.row3[1] = 0;
+	result.row4[0] = 0; result.row4[1] = 0;
+	return result;
 }
