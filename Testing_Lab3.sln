@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Testing_Lab3", "Testing_Lab3.vcxproj", "{61486F60-79D6-4CB7-B7D4-BA123EDE1E63}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixCalculatorTests", "MatrixCalculatorTests\MatrixCalculatorTests.vcxproj", "{7E217C1D-78F2-45E2-9477-D54067EE0821}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{61486F60-79D6-4CB7-B7D4-BA123EDE1E63}.Release|x64.Build.0 = Release|x64
 		{61486F60-79D6-4CB7-B7D4-BA123EDE1E63}.Release|x86.ActiveCfg = Release|Win32
 		{61486F60-79D6-4CB7-B7D4-BA123EDE1E63}.Release|x86.Build.0 = Release|Win32
+		{7E217C1D-78F2-45E2-9477-D54067EE0821}.Debug|x64.ActiveCfg = Debug|x64
+		{7E217C1D-78F2-45E2-9477-D54067EE0821}.Debug|x64.Build.0 = Debug|x64
+		{7E217C1D-78F2-45E2-9477-D54067EE0821}.Debug|x86.ActiveCfg = Debug|Win32
+		{7E217C1D-78F2-45E2-9477-D54067EE0821}.Debug|x86.Build.0 = Debug|Win32
+		{7E217C1D-78F2-45E2-9477-D54067EE0821}.Release|x64.ActiveCfg = Release|x64
+		{7E217C1D-78F2-45E2-9477-D54067EE0821}.Release|x64.Build.0 = Release|x64
+		{7E217C1D-78F2-45E2-9477-D54067EE0821}.Release|x86.ActiveCfg = Release|Win32
+		{7E217C1D-78F2-45E2-9477-D54067EE0821}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
