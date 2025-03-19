@@ -155,8 +155,8 @@ namespace MatrixCalculatorTests
 			double multiplier = 2.0;
 			counter = 1;
 			Matrix actual = Matrix::MultByNum(mat, multiplier);
-			Assert::AreEqual(COLS_COUNT, actual.GetRowsCount(), L"Не совпадает количество строк");
-			Assert::AreEqual(ROWS_COUNT, actual.GetColsCount(), L"Не совпадает количество столбцов");
+			Assert::AreEqual(ROWS_COUNT, actual.GetRowsCount(), L"Не совпадает количество строк");
+			Assert::AreEqual(COLS_COUNT, actual.GetColsCount(), L"Не совпадает количество столбцов");
 			for (int i = 0; i < ROWS_COUNT; i++)
 				for (int j = 0; j < COLS_COUNT; j++)
 				{

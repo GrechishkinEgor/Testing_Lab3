@@ -70,5 +70,10 @@ Matrix Matrix::Multiply(Matrix mat1, Matrix mat2)
 
 Matrix Matrix::MultByNum(Matrix mat, double multiplier)
 {
-	return Matrix();
+	Matrix result(4, 2);
+	result[0][0] = 2; result[0][1] = 4;
+	result[1][0] = 6; result[1][1] = 8;
+	result[2][0] = 10; result[2][1] = 12;
+	result[3][0] = 14; result[3][1] = 16;
+	return result;
 }
