@@ -2,16 +2,19 @@
 
 Matrix::Matrix()
 {
+	//todo add implementation
 }
 
 Matrix::Matrix(int rowsCount, int colsCount)
 {
+	//todo finish implementation
 	this->rowsCount = rowsCount;
 	this->colsCount = colsCount;
 }
 
 void Matrix::Resize(int rowsCount, int colsCount)
 {
+	//todo finish implementation
 	this->rowsCount = rowsCount;
 	this->colsCount = colsCount;
 }
@@ -28,6 +31,7 @@ int Matrix::GetColsCount()
 
 double* Matrix::operator[](int index)
 {
+	//todo finish implementation
 	if (index == 0)
 		return row1;
 	if (index == 1)
@@ -39,6 +43,7 @@ double* Matrix::operator[](int index)
 
 Matrix Matrix::Sum(Matrix mat1, Matrix mat2)
 {
+	//todo finish implementation
 	Matrix result(4, 2);
 	result.row1[0] = 0; result.row1[1] = 0;
 	result.row2[0] = 0; result.row2[1] = 0;
@@ -49,6 +54,7 @@ Matrix Matrix::Sum(Matrix mat1, Matrix mat2)
 
 Matrix Matrix::Transpose(Matrix mat)
 {
+	//todo finish implementation
 	Matrix result(2, 4);
 	result[0][0] = 1; result[0][1] = 3; result[0][2] = 5; result[0][3] = 7;
 	result[1][0] = 2; result[1][1] = 4; result[1][2] = 6; result[1][3] = 8;
@@ -57,11 +63,13 @@ Matrix Matrix::Transpose(Matrix mat)
 
 double Matrix::Det()
 {
+	//todo finish implementation
 	return 1.0;
 }
 
 Matrix Matrix::Multiply(Matrix mat1, Matrix mat2)
 {
+	//todo finish implementation
 	Matrix result(2, 1);
 	result[0][0] = 12.0;
 	result[1][0] = 30.0;
@@ -70,6 +78,7 @@ Matrix Matrix::Multiply(Matrix mat1, Matrix mat2)
 
 Matrix Matrix::MultByNum(Matrix mat, double multiplier)
 {
+	//todo finish implementation
 	Matrix result(4, 2);
 	result[0][0] = 2; result[0][1] = 4;
 	result[1][0] = 6; result[1][1] = 8;
