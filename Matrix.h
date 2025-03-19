@@ -20,5 +20,6 @@ public:
 	double* operator[](int index);
 
 	static Matrix Sum(Matrix mat1, Matrix mat2);
+	static Matrix Transpose(Matrix mat);
 };
 

@@ -46,3 +46,8 @@ Matrix Matrix::Sum(Matrix mat1, Matrix mat2)
 	result.row4[0] = 0; result.row4[1] = 0;
 	return result;
 }
+
+Matrix Matrix::Transpose(Matrix mat)
+{
+	return Matrix();
+}
