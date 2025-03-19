@@ -10,5 +10,7 @@ public:
 	void Resize(int rowsCount, int colsCount);
 	int GetRowsCount();
 	int GetColsCount();
+
+	double* operator[](int index);
 };
 

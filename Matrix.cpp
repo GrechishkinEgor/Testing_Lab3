@@ -25,3 +25,8 @@ int Matrix::GetColsCount()
 {
 	return colsCount;
 }
+
+double* Matrix::operator[](int index)
+{
+	return nullptr;
+}
