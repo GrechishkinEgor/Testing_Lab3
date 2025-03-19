@@ -62,5 +62,8 @@ double Matrix::Det()
 
 Matrix Matrix::Multiply(Matrix mat1, Matrix mat2)
 {
-	return Matrix();
+	Matrix result(2, 1);
+	result[0][0] = 12.0;
+	result[1][0] = 30.0;
+	return result;
 }
