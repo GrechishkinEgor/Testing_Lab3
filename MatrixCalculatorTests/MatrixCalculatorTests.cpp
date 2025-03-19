@@ -113,7 +113,7 @@ namespace MatrixCalculatorTests
 				for (int j = 0; j < N; j++)
 					mat[i][j] = i == j ? 1 : 0;
 
-			if (mat.Det() - 1.0 > 1e-5)
+			if (abs(mat.Det() - 1.0) > 1e-5)
 				Assert::Fail(L"Неверный определитель");
 		}
 
@@ -133,10 +133,37 @@ namespace MatrixCalculatorTests
 			Matrix actual = Matrix::Multiply(mat1, mat2);
 			Assert::AreEqual(K, actual.GetRowsCount(), L"Не совпадает количество строк");
 			Assert::AreEqual(L, actual.GetColsCount(), L"Не совпадает количество столбцов");
-			if (actual[0][0] - 12.0 > 1e-5)
+			if (abs(actual[0][0] - 12.0) > 1e-5)
 				Assert::Fail(L"Не совпадают элементы матрицы");
-			if (actual[0][1] - 30.0 > 1e-5)
+			if (abs(actual[1][0] - 30.0) > 1e-5)
 				Assert::Fail(L"Не совпадают элементы матрицы");
+		}
+
+		TEST_METHOD(MultiplyMatrixByNumber)
+		{
+			const int ROWS_COUNT = 4;
+			const int COLS_COUNT = 2;
+			Matrix mat(ROWS_COUNT, COLS_COUNT);
+			double counter = 1;
+			for (int i = 0; i < ROWS_COUNT; i++)
+				for (int j = 0; j < COLS_COUNT; j++)
+				{
+					mat[i][j] = counter;
+					counter++;
+				}
+			
+			double multiplier = 2.0;
+			counter = 1;
+			Matrix actual = Matrix::MultByNum(mat, multiplier);
+			Assert::AreEqual(COLS_COUNT, actual.GetRowsCount(), L"Не совпадает количество строк");
+			Assert::AreEqual(ROWS_COUNT, actual.GetColsCount(), L"Не совпадает количество столбцов");
+			for (int i = 0; i < ROWS_COUNT; i++)
+				for (int j = 0; j < COLS_COUNT; j++)
+				{
+					if (abs(actual[i][j] - counter * multiplier) > 1e-5)
+						Assert::Fail(L"Не совпадают элементы матрицы");
+					counter++;
+				}
 		}
 	};
 }

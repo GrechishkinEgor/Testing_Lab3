@@ -67,3 +67,8 @@ Matrix Matrix::Multiply(Matrix mat1, Matrix mat2)
 	result[1][0] = 30.0;
 	return result;
 }
+
+Matrix Matrix::MultByNum(Matrix mat, double multiplier)
+{
+	return Matrix();
+}

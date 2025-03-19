@@ -25,5 +25,6 @@ public:
 	double Det();
 
 	static Matrix Multiply(Matrix mat1, Matrix mat2);
+	static Matrix MultByNum(Matrix mat, double multiplier);
 };
 
