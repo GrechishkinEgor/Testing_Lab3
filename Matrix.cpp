@@ -28,5 +28,11 @@ int Matrix::GetColsCount()
 
 double* Matrix::operator[](int index)
 {
-	return nullptr;
+	if (index == 0)
+		return row1;
+	if (index == 1)
+		return row2;
+	if (index == 3)
+		return row3;
+	return row4;
 }
