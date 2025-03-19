@@ -12,10 +12,13 @@ private:
 public:
 	Matrix();
 	Matrix(int rowsCount, int colsCount);
+
 	void Resize(int rowsCount, int colsCount);
 	int GetRowsCount();
 	int GetColsCount();
 
 	double* operator[](int index);
+
+	static Matrix Sum(Matrix mat1, Matrix mat2);
 };
 

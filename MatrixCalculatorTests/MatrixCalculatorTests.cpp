@@ -57,5 +57,30 @@ namespace MatrixCalculatorTests
 					counter++;
 				}
 		}
+
+		TEST_METHOD(Sum)
+		{
+			const int ROWS_COUNT = 4;
+			const int COLS_COUNT = 2;
+			Matrix mat1(ROWS_COUNT, COLS_COUNT);
+			Matrix mat2(ROWS_COUNT, COLS_COUNT);
+
+			double counter = 1;
+			for (int i = 0; i < ROWS_COUNT; i++)
+				for (int j = 0; j < COLS_COUNT; j++)
+				{
+					mat1[i][j] = counter;
+					mat2[i][j] = -counter;
+					counter++;
+				}
+
+			Matrix actual = Matrix::Sum(mat1, mat2);
+
+			Assert::AreEqual(ROWS_COUNT, actual.GetRowsCount(), L"Не совпадает количество строк");
+			Assert::AreEqual(COLS_COUNT, actual.GetColsCount(), L"Не совпадает количество столбцов");
+			for (int i = 0; i < ROWS_COUNT; i++)
+				for (int j = 0; j < COLS_COUNT; j++)
+					Assert::AreEqual(0.0, actual[i][j], L"Не совпадают элементы матрицы");
+		}
 	};
 }

@@ -36,3 +36,8 @@ double* Matrix::operator[](int index)
 		return row3;
 	return row4;
 }
+
+Matrix Matrix::Sum(Matrix mat1, Matrix mat2)
+{
+	return Matrix();
+}
