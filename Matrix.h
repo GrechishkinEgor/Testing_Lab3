@@ -23,5 +23,7 @@ public:
 	static Matrix Transpose(Matrix mat);
 
 	double Det();
+
+	static Matrix Multiply(Matrix mat1, Matrix mat2);
 };
 

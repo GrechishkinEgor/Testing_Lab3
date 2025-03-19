@@ -113,7 +113,30 @@ namespace MatrixCalculatorTests
 				for (int j = 0; j < N; j++)
 					mat[i][j] = i == j ? 1 : 0;
 
-			Assert::AreEqual(1.0, mat.Det(), L"Неверный определитель");
+			if (mat.Det() - 1.0 > 1e-5)
+				Assert::Fail(L"Неверный определитель");
+		}
+
+		TEST_METHOD(MatrixMultiplication)
+		{
+			const int K = 2;
+			const int M = 3;
+			const int L = 1;
+			Matrix mat1(K, M);
+			mat1[0][0] = 1; mat1[0][1] = 2; mat1[0][2] = 3;
+			mat1[1][0] = 4; mat1[1][1] = 5; mat1[1][2] = 6;
+			Matrix mat2(M, L);
+			mat2[0][0] = 2;
+			mat2[1][0] = 2;
+			mat2[2][0] = 2;
+
+			Matrix actual = Matrix::Multiply(mat1, mat2);
+			Assert::AreEqual(K, actual.GetRowsCount(), L"Не совпадает количество строк");
+			Assert::AreEqual(L, actual.GetColsCount(), L"Не совпадает количество столбцов");
+			if (actual[0][0] - 12.0 > 1e-5)
+				Assert::Fail(L"Не совпадают элементы матрицы");
+			if (actual[0][1] - 30.0 > 1e-5)
+				Assert::Fail(L"Не совпадают элементы матрицы");
 		}
 	};
 }

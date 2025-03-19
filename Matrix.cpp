@@ -59,3 +59,8 @@ double Matrix::Det()
 {
 	return 1.0;
 }
+
+Matrix Matrix::Multiply(Matrix mat1, Matrix mat2)
+{
+	return Matrix();
+}
