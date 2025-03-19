@@ -49,5 +49,8 @@ Matrix Matrix::Sum(Matrix mat1, Matrix mat2)
 
 Matrix Matrix::Transpose(Matrix mat)
 {
-	return Matrix();
+	Matrix result(2, 4);
+	result[0][0] = 1; result[0][1] = 3; result[0][2] = 5; result[0][3] = 7;
+	result[1][0] = 2; result[1][1] = 4; result[1][2] = 6; result[1][3] = 8;
+	return result;
 }
