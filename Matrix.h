@@ -21,5 +21,7 @@ public:
 
 	static Matrix Sum(Matrix mat1, Matrix mat2);
 	static Matrix Transpose(Matrix mat);
+
+	double Det();
 };
 

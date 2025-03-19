@@ -104,5 +104,16 @@ namespace MatrixCalculatorTests
 				for (int j = 0; j < ROWS_COUNT; j++)
 					Assert::AreEqual(expected[i][j], actual[i][j], L"Не совпадают элементы матрицы");
 		}
+
+		TEST_METHOD(Determinant)
+		{
+			const int N = 3;
+			Matrix mat(N, N);
+			for (int i = 0; i < N; i++)
+				for (int j = 0; j < N; j++)
+					mat[i][j] = i == j ? 1 : 0;
+
+			Assert::AreEqual(1.0, mat.Det(), L"Неверный определитель");
+		}
 	};
 }

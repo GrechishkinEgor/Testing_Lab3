@@ -54,3 +54,8 @@ Matrix Matrix::Transpose(Matrix mat)
 	result[1][0] = 2; result[1][1] = 4; result[1][2] = 6; result[1][3] = 8;
 	return result;
 }
+
+double Matrix::Det()
+{
+	return 0.0;
+}
